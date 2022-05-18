@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="salesrule" resource="default" engine="innodb" comment="Salesrule">
+        <column xsi:type="int" name="offer_code" unsigned="true" nullable="true" identity="false"
+                comment="Offer Code"/>
+        <column xsi:type="smallint" name="is_master_rule" unsigned="false" nullable="false" identity="false"
+        default="0" comment="Is Master Rule"/>
+        <constraint xsi:type="unique" referenceId="SALES_RULE_OFFER_CODE">
+            <column name="offer_code"/>
+        </constraint>
+    </table>
+</schema>

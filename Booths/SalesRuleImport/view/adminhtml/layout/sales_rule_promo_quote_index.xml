@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="adminhtml.block.promo.quote.grid">
+            <referenceBlock name="adminhtml.promo.quote.grid.columnSet">
+                <block class="Magento\Backend\Block\Widget\Grid\Column" name="adminhtml.promo.quote.grid.columnSet.is_master_rule" as="is_master_rule">
+                    <arguments>
+                        <argument name="header" xsi:type="string" translate="true">Is master rule</argument>
+                        <argument name="sortable" xsi:type="string">3</argument>
+                        <argument name="index" xsi:type="string">is_master_rule</argument>
+                        <argument name="type" xsi:type="string">options</argument>
+                        <argument name="options" xsi:type="array">
+                            <item name="0" xsi:type="array">
+                                <item name="value" xsi:type="string">1</item>
+                                <item name="label" xsi:type="string" translate="true">Yes</item>
+                            </item>
+                            <item name="1" xsi:type="array">
+                                <item name="value" xsi:type="string">0</item>
+                                <item name="label" xsi:type="string" translate="true">No</item>
+                            </item>
+                        </argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Backend\Block\Widget\Grid\Column" name="adminhtml.promo.quote.grid.columnSet.offer_code" as="offer_code">
+                    <arguments>
+                        <argument name="header" xsi:type="string" translate="true">Offer Code</argument>
+                        <argument name="index" xsi:type="string">offer_code</argument>
+                        <argument name="sortable" xsi:type="string">4</argument>
+                    </arguments>
+                </block>
+            </referenceBlock>
+        </referenceBlock>
+    </body>
+</page>
